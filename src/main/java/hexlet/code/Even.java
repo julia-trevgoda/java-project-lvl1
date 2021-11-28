@@ -5,9 +5,15 @@ import java.util.Scanner;
 import static java.lang.Math.random;
 
 public class Even {
+
+    public static final int MAX_COUNT_TURNS = 3;
+    public static final int MAX_RANDOM = 10;
+
     static int getRandomNumber() {
-        int max = 10;
+
+        int max = MAX_RANDOM;
         int min = 1;
+
         int range = max - min + 1;
 
         int randomNumber = (int) (random() * range) + min;
@@ -27,8 +33,10 @@ public class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
 
         int turn = 0;
+        int maxCountTurns = MAX_COUNT_TURNS;
 
-        while (turn < 3) {
+
+        while (turn < maxCountTurns) {
 
             int currentNumber = getRandomNumber();
             String rightAnswer = getRightAnswer(currentNumber);
@@ -46,7 +54,7 @@ public class Even {
                 break;
             }
         }
-        if (turn == 3) {
+        if (turn == maxCountTurns) {
             System.out.println("Congratulations, " + userName + "!");
         } else {
             System.out.println("Let's try again, " + userName + "!");
