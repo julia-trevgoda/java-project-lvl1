@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         while (true) {
-            System.out.println("Please enter the game number and press Enter." +
-                    "\n1 - Greet" +
-                    "\n2 - Even" +
-                    "\n0 - Exit");
+            System.out.println("Please enter the game number and press Enter."
+                    + "\n1 - Greet"
+                    + "\n2 - Even"
+                    + "\n0 - Exit");
 
             Scanner scanner = new Scanner(System.in);
             int gameChoice = scanner.nextInt();
@@ -20,6 +20,8 @@ public class App {
                     Cli.sayHello();
                     break;
                 case (0):
+                    System.exit(0);
+                default:
                     System.exit(0);
             }
         }
