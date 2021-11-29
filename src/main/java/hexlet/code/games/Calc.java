@@ -31,9 +31,11 @@ public class Calc {
 
         if (answer == rightAnswer) {
             System.out.println("Correct!");
+            System.out.println();
             return true;
         } else {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
+            System.out.println();
             return false;
         }
     }

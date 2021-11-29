@@ -27,9 +27,11 @@ public class Even {
 
         if (answer.equals(rightAnswer)) {
             System.out.println("Correct!");
+            System.out.println();
             return true;
         } else {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
+            System.out.println();
             return false;
         }
     }
