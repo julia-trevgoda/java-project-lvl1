@@ -13,3 +13,6 @@ https://asciinema.org/a/lxGWod8XUfurYEpTJ4FMQOl6T
 
 Asciinema for GCP game:
 https://asciinema.org/a/wdTHjS9f7NzVYYOcJphqe7KU7
+
+Asciinema for Progression game:
+https://asciinema.org/a/KftGwMDJZ9q93giFDmrxFaU8m
