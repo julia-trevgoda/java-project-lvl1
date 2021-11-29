@@ -10,3 +10,6 @@ https://asciinema.org/a/BHOIqk2ZfDcmiWRXaxi51lxIr
 
 Asccinema for Calc game:
 https://asciinema.org/a/lxGWod8XUfurYEpTJ4FMQOl6T
+
+Asciinema for GCP game:
+https://asciinema.org/a/wdTHjS9f7NzVYYOcJphqe7KU7
