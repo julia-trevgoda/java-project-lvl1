@@ -1,10 +1,17 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Scanner;
 
 
 public class Even {
+
+    private static final int MAX_RANDOM_NUM = 99;
+    private static final int MAX_COUNT_QUESTIONS = 4;
+    private static String[][] playEven = new String[Engine.GAME_ARRAY_LENGTH][];
+
+    static String getGameDescription() {
+        return "Answer 'yes' if number even otherwise answer 'no'.";
+    }
 
     static boolean isEven(int num) {
         return num % 2 == 0;
@@ -14,26 +21,17 @@ public class Even {
         return isEven(num) ? "yes" : "no";
     }
 
-    public static boolean playEven() {
+    public static String[][] getPlayEven() {
 
-        int currentNumber = Engine.getRandomNumber();
-        String rightAnswer = getRightAnswer(currentNumber);
-        System.out.println("Question: " + currentNumber);
+        playEven[0] = new String[]{getGameDescription()};
 
-        Scanner scanner = new Scanner(System.in);
-        String answer = scanner.next();
-        System.out.println("Your answer: " + answer);
+        for (int i = 1; i < MAX_COUNT_QUESTIONS; i++) {
 
-
-        if (answer.equals(rightAnswer)) {
-            System.out.println("Correct!");
-            System.out.println();
-            return true;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
-            System.out.println();
-            return false;
+            int currentNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
+            String rightAnswer = getRightAnswer(currentNumber);
+            playEven[i] = new String[]{Integer.toString(currentNumber), rightAnswer};
         }
+        return playEven;
     }
 }
 

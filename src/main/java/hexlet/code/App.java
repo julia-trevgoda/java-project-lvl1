@@ -17,6 +17,7 @@ public class App {
                     + "\n2 - Even"
                     + "\n3 - Calc"
                     + "\n4 - GCD"
+                    + "\n5 - Progression"
                     + "\n0 - Exit");
 
             Scanner scanner = new Scanner(System.in);

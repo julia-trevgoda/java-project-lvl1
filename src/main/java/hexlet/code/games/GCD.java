@@ -2,9 +2,15 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class GCD {
+
+    private static final int MAX_RANDOM_NUM = 9;
+    private static final int MAX_COUNT_QUESTIONS = 4;
+    private static String[][] playGCD = new String[Engine.GAME_ARRAY_LENGTH][];
+
+    static String getGameDescription() {
+        return "Find the greatest common divisor of given numbers.";
+    }
 
     static int getAnswer(int num1, int num2) {
         while (num1 != 0 && num2 != 0) {
@@ -17,27 +23,20 @@ public class GCD {
         return num1 + num2;
     }
 
-    public static boolean playGCD() {
+    public static String[][] getPlayGCD() {
 
-        int firstRandomNumber = Engine.getRandomNumber();
-        int secondRandomNumber = Engine.getRandomNumber();
+        playGCD[0] = new String[]{getGameDescription()};
 
-        System.out.println("Question: " + firstRandomNumber + " " + secondRandomNumber);
+        for (int i = 1; i < MAX_COUNT_QUESTIONS; i++) {
 
-        int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber);
+            int firstRandomNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
+            int secondRandomNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
 
-        Scanner scanner = new Scanner(System.in);
-        int answer = Integer.parseInt(scanner.next());
-        System.out.println("Your answer: " + answer);
+            String numbers = firstRandomNumber + " " + secondRandomNumber;
+            int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber);
 
-        if (answer == rightAnswer) {
-            System.out.println("Correct!");
-            System.out.println();
-            return true;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
-            System.out.println();
-            return false;
+            playGCD[i] = new String[]{numbers, Integer.toString(rightAnswer)};
         }
+        return playGCD;
     }
 }

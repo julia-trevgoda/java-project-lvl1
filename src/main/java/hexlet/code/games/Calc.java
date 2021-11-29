@@ -1,42 +1,44 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Scanner;
 
 public class Calc {
 
+    private static final int MAX_RANDOM_NUM = 19;
+    private static final int MAX_COUNT_QUESTIONS = 4;
+    private static String[][] playCalc = new String[Engine.GAME_ARRAY_LENGTH][];
+
+    static String getGameDescription() {
+        return "What is the result of the expression?";
+    }
 
     static int getAnswer(int num1, int num2, String sign) {
         switch (sign) {
-            case ("+"): return num1 + num2;
-            case ("-"): return num1 - num2;
-            case ("*"): return num1 * num2;
-            default: return 0;
+            case ("+"):
+                return num1 + num2;
+            case ("-"):
+                return num1 - num2;
+            case ("*"):
+                return num1 * num2;
+            default:
+                return 0;
         }
     }
 
-    public static boolean playCalc() {
+    public static String[][] getPlayCalc() {
 
-        int firstRandomNumber = Engine.getRandomNumber();
-        int secondRandomNumber = Engine.getRandomNumber();
-        String sign = Engine.getRandomSign();
+        playCalc[0] = new String[]{getGameDescription()};
 
-        System.out.println("Question: " + firstRandomNumber + " " + sign + " " + secondRandomNumber);
+        for (int i = 1; i < MAX_COUNT_QUESTIONS; i++) {
 
-        int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber, sign);
+            int firstRandomNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
+            int secondRandomNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
+            String sign = Engine.getRandomSign();
 
-        Scanner scanner = new Scanner(System.in);
-        int answer = Integer.parseInt(scanner.next());
-        System.out.println("Your answer: " + answer);
-
-        if (answer == rightAnswer) {
-            System.out.println("Correct!");
-            System.out.println();
-            return true;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
-            System.out.println();
-            return false;
+            int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber, sign);
+            String expression = firstRandomNumber + " " + sign + " " + secondRandomNumber;
+            playCalc[i] = new String[]{expression, Integer.toString(rightAnswer)};
         }
+        return playCalc;
     }
 }
