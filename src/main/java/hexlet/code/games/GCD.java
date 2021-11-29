@@ -1,29 +1,30 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+
 import java.util.Scanner;
 
-public class Calc {
+public class GCD {
 
-
-    static int getAnswer(int num1, int num2, String sign) {
-        switch (sign) {
-            case ("+"): return num1 + num2;
-            case ("-"): return num1 - num2;
-            case ("*"): return num1 * num2;
-            default: return 0;
+    static int getAnswer(int num1, int num2) {
+        while (num1 != 0 && num2 != 0) {
+            if (num1 > num2) {
+                num1 = num1 % num2;
+            } else {
+                num2 = num2 % num1;
+            }
         }
+        return num1 + num2;
     }
 
-    public static boolean playCalc() {
+    public static boolean playGCD() {
 
         int firstRandomNumber = Engine.getRandomNumber();
         int secondRandomNumber = Engine.getRandomNumber();
-        String sign = Engine.getRandomSign();
 
-        System.out.println("Question: " + firstRandomNumber + " " + sign + " " + secondRandomNumber);
+        System.out.println("Question: " + firstRandomNumber + " " + secondRandomNumber);
 
-        int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber, sign);
+        int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber);
 
         Scanner scanner = new Scanner(System.in);
         int answer = Integer.parseInt(scanner.next());

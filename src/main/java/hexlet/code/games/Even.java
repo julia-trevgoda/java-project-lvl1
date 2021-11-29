@@ -1,23 +1,10 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import java.util.Scanner;
 
-import static java.lang.Math.random;
 
 public class Even {
-
-    public static final int MAX_RANDOM = 10;
-
-    static int getRandomNumber() {
-
-        int max = MAX_RANDOM;
-        int min = 1;
-        int range = max - min + 1;
-
-        int randomNumber = (int) (random() * range) + min;
-
-        return randomNumber;
-    }
 
     static boolean isEven(int num) {
         return num % 2 == 0;
@@ -29,7 +16,7 @@ public class Even {
 
     public static boolean playEven() {
 
-        int currentNumber = getRandomNumber();
+        int currentNumber = Engine.getRandomNumber();
         String rightAnswer = getRightAnswer(currentNumber);
         System.out.println("Question: " + currentNumber);
 
