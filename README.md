@@ -5,5 +5,8 @@
 
 [![makefile-ci](https://github.com/julia-trevgoda/java-project-lvl1/actions/workflows/makefile-ci.yml/badge.svg)](https://github.com/julia-trevgoda/java-project-lvl1/actions/workflows/makefile-ci.yml)
 
-Asciinema for Game menu + Even game implementation:
+Asciinema for Game menu + Even game:
 https://asciinema.org/a/BHOIqk2ZfDcmiWRXaxi51lxIr
+
+Asccinema for Calc game:
+https://asciinema.org/a/lxGWod8XUfurYEpTJ4FMQOl6T
