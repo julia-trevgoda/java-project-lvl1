@@ -33,10 +33,11 @@ public class App {
                 userName = Cli.sayHello();
             } else if (gameChoice == 0) {
                 System.exit(0);
-            } else if (userName == null && gameChoice > 1) {
-                userName = Cli.sayHello();
-                Engine.playGame(gameChoice);
+//            } else if (userName == null && gameChoice > 1) {
+//                userName = Cli.sayHello();
+//                Engine.playGame(gameChoice);
             } else {
+                userName = Cli.sayHello();
                 Engine.playGame(gameChoice);
             }
         }
