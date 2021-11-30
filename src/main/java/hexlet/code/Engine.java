@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 import java.util.Random;
@@ -33,6 +34,7 @@ public class Engine {
     public static final int CALC_GAME = 3;
     public static final int GCD_GAME = 4;
     public static final int PROGRESSION_GAME = 5;
+    public static final int PRIME_GAME = 6;
 
     public static final int GAME_ARRAY_LENGTH = 4;
 
@@ -58,6 +60,10 @@ public class Engine {
                 break;
             case (PROGRESSION_GAME):
                 currentGame = Progression.getPlayProgression();
+                System.out.println(currentGame[0][0]);
+                break;
+            case (PRIME_GAME):
+                currentGame = Prime.getPlayPrime();
                 System.out.println(currentGame[0][0]);
                 break;
             default:

@@ -18,6 +18,7 @@ public class App {
                     + "\n3 - Calc"
                     + "\n4 - GCD"
                     + "\n5 - Progression"
+                    + "\n6 - Prime"
                     + "\n0 - Exit");
 
             Scanner scanner = new Scanner(System.in);
