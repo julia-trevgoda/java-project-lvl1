@@ -18,4 +18,4 @@ Asciinema for Progression game:
 https://asciinema.org/a/KftGwMDJZ9q93giFDmrxFaU8m
 
 Asciinema for Prime game:
-https://asciinema.org/a/RUyrwZ2YiMECJjc1eoWgu3YoY
+[![asciicast](https://asciinema.org/a/RUyrwZ2YiMECJjc1eoWgu3YoY.svg)](https://asciinema.org/a/RUyrwZ2YiMECJjc1eoWgu3YoY)
