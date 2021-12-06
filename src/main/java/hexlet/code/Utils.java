@@ -10,7 +10,7 @@ public class Utils {
         return new String[]{"+", "*", "-"};
     }
 
-    public static int getRandomNumber( int min, int max) {
+    public static int getRandomNumber(int min, int max) {
         Random rand = new Random();
         int randomNumber = rand.nextInt(max);
         return randomNumber + min;
