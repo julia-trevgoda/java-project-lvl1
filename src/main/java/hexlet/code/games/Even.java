@@ -1,11 +1,13 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 
 public class Even {
 
     private static final int MAX_RANDOM_NUM = 99;
+    private static final int MIN_RANDOM_NUM = 1;
     private static final int MAX_COUNT_QUESTIONS = 4;
     private static String[][] playEven = new String[Engine.GAME_ARRAY_LENGTH][];
 
@@ -27,7 +29,7 @@ public class Even {
 
         for (int i = 1; i < MAX_COUNT_QUESTIONS; i++) {
 
-            int currentNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
+            int currentNumber = Utils.getRandomNumber(MIN_RANDOM_NUM, MAX_RANDOM_NUM);
             String rightAnswer = getRightAnswer(currentNumber);
             playEven[i] = new String[]{Integer.toString(currentNumber), rightAnswer};
         }

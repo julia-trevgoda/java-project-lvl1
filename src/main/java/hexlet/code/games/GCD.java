@@ -1,10 +1,12 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
 
     private static final int MAX_RANDOM_NUM = 9;
+    private static final int MIN_RANDOM_NUM = 1;
     private static final int MAX_COUNT_QUESTIONS = 4;
     private static String[][] playGCD = new String[Engine.GAME_ARRAY_LENGTH][];
 
@@ -29,8 +31,8 @@ public class GCD {
 
         for (int i = 1; i < MAX_COUNT_QUESTIONS; i++) {
 
-            int firstRandomNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
-            int secondRandomNumber = Engine.getRandomNumber(MAX_RANDOM_NUM);
+            int firstRandomNumber = Utils.getRandomNumber(MIN_RANDOM_NUM, MAX_RANDOM_NUM);
+            int secondRandomNumber = Utils.getRandomNumber(MIN_RANDOM_NUM, MAX_RANDOM_NUM);
 
             String numbers = firstRandomNumber + " " + secondRandomNumber;
             int rightAnswer = getAnswer(firstRandomNumber, secondRandomNumber);
