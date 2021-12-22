@@ -1,8 +1,20 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+
 import java.util.Scanner;
 
 public class App {
+
+    public static final int EVEN_GAME = 2;
+    public static final int CALC_GAME = 3;
+    public static final int GCD_GAME = 4;
+    public static final int PROGRESSION_GAME = 5;
+    public static final int PRIME_GAME = 6;
 
     private static String userName = null;
 
@@ -38,7 +50,27 @@ public class App {
 //                Engine.playGame(gameChoice);
         } else {
             userName = Cli.sayHello();
-            Engine.playGame(gameChoice);
+
+            switch (gameChoice) {
+                case (EVEN_GAME):
+                    Even.getPlayEven();
+                    break;
+                case (CALC_GAME):
+                    Calc.getPlayCalc();
+                    break;
+                case (GCD_GAME):
+                    GCD.getPlayGCD();
+                    break;
+                case (PROGRESSION_GAME):
+                    Progression.getPlayProgression();
+                    break;
+                case (PRIME_GAME):
+                    Prime.getPlayPrime();
+                    break;
+                default:
+                    System.out.println("Select the game");
+            }
+
         }
     }
 //    }
