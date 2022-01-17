@@ -5,28 +5,23 @@ import hexlet.code.Utils;
 
 public class Even {
 
-    private static final int MAX_RANDOM_NUM = 99;
-    private static final int MIN_RANDOM_NUM = 1;
-    private static final int MAX_COUNT_QUESTIONS = 3;
-    private static final String[][] PLAY_EVEN = new String[Engine.GAME_ARRAY_LENGTH][];
     private static final String GAME_DESCRIPTION = "Answer 'yes' if number even otherwise answer 'no'.";
 
     static boolean isEven(int num) {
         return num % 2 == 0;
     }
 
-    static String getRightAnswer(int num) {
-        return isEven(num) ? "yes" : "no";
-    }
+    public static void runEven() {
 
-    public static void getPlayEven() {
-        for (int i = 0; i < MAX_COUNT_QUESTIONS; i++) {
+        String[][] playEven = new String[Engine.MAX_COUNT_TURNS][];
 
-            int currentNumber = Utils.getRandomNumber(MIN_RANDOM_NUM, MAX_RANDOM_NUM);
-            String rightAnswer = getRightAnswer(currentNumber);
-            PLAY_EVEN[i] = new String[]{Integer.toString(currentNumber), rightAnswer};
+        for (int i = 0; i < Engine.MAX_COUNT_TURNS; i++) {
+
+            int currentNumber = Utils.getRandomNumber(Utils.MIN_RANDOM_NUM, Utils.MAX_RANDOM_NUM);
+            String rightAnswer = isEven(currentNumber) ? "yes" : "no";
+            playEven[i] = new String[]{Integer.toString(currentNumber), rightAnswer};
         }
-        Engine.playGame(PLAY_EVEN, GAME_DESCRIPTION);
+        Engine.playGame(playEven, GAME_DESCRIPTION);
     }
 }
 
