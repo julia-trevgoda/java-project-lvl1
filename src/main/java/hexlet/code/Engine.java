@@ -8,7 +8,10 @@ public class Engine {
 
     public static void playGame(String[][] currentGame, String gameDescription) {
 
-        App.setUserName(Cli.sayHello());
+        Scanner nameInput = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Welcome to the Brain Games! May I have your name?");
+        String userName = nameInput.next();
         System.out.println(gameDescription);
 
         for (int turn = 0; turn < MAX_COUNT_TURNS; turn++) {
@@ -16,8 +19,8 @@ public class Engine {
             String question = "Question: " + currentGame[turn][0];
             System.out.println(question);
 
-            Scanner scanner = new Scanner(System.in);
-            String answer = scanner.nextLine();
+            Scanner answerInput = new Scanner(System.in);
+            String answer = answerInput.nextLine();
             System.out.println("Your answer: " + answer);
 
             String rightAnswer = currentGame[turn][1];
@@ -27,12 +30,12 @@ public class Engine {
                 System.out.println();
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
-                System.out.println("Let's try again, " + App.getUserName() + "!");
+                System.out.println("Let's try again, " + userName + "!");
                 System.out.println();
                 return;
             }
         }
-        System.out.println("Congratulations, " + App.getUserName() + "!");
+        System.out.println("Congratulations, " + userName + "!");
         System.out.println();
     }
 }

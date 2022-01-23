@@ -10,22 +10,13 @@ import java.util.Scanner;
 
 public class App {
 
+    public static final int EXIT = 0;
     public static final int GREETINGS = 1;
     public static final int EVEN_GAME = 2;
     public static final int CALC_GAME = 3;
     public static final int GCD_GAME = 4;
     public static final int PROGRESSION_GAME = 5;
     public static final int PRIME_GAME = 6;
-
-    private static String userName = "Anonymous";
-
-    public static String getUserName() {
-        return userName;
-    }
-
-    public static void setUserName(String name) {
-        userName = name;
-    }
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter."
@@ -44,33 +35,29 @@ public class App {
         System.out.println(currentChoice);
         System.out.println();
 
-
-        if (gameChoice == 0) {
-            System.exit(0);
-        } else {
-            switch (gameChoice) {
-                case (GREETINGS):
-                    userName = Cli.sayHello();
-                    break;
-                case (EVEN_GAME):
-                    Even.runEven();
-                    break;
-                case (CALC_GAME):
-                    Calc.runCalc();
-                    break;
-                case (GCD_GAME):
-                    GCD.runGCD();
-                    break;
-                case (PROGRESSION_GAME):
-                    Progression.runProgression();
-                    break;
-                case (PRIME_GAME):
-                    Prime.runPrime();
-                    break;
-                default:
-                    System.out.println("Select the game");
-            }
-
+        switch (gameChoice) {
+            case (GREETINGS):
+                Cli.sayHello();
+                break;
+            case (EVEN_GAME):
+                Even.runEven();
+                break;
+            case (CALC_GAME):
+                Calc.runCalc();
+                break;
+            case (GCD_GAME):
+                GCD.runGCD();
+                break;
+            case (PROGRESSION_GAME):
+                Progression.runProgression();
+                break;
+            case (PRIME_GAME):
+                Prime.runPrime();
+                break;
+            case (EXIT):
+                return;
+            default:
+                System.out.println("Select the game");
         }
     }
 }

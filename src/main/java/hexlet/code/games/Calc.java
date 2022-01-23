@@ -8,14 +8,11 @@ import java.util.Random;
 public class Calc {
 
     private static final String GAME_DESCRIPTION = "What is the result of the expression?";
-
-    public static String[] getSignsArray() {
-        return new String[]{"+", "*", "-"};
-    }
+    private static final String[] SIGNS_ARRAY = {"+", "*", "-"};
 
     public static String getRandomSign() {
-        int randomIndex = new Random().nextInt(getSignsArray().length);
-        return getSignsArray()[randomIndex];
+        int randomIndex = new Random().nextInt(SIGNS_ARRAY.length);
+        return SIGNS_ARRAY[randomIndex];
     }
 
     static int calculateAnswer(int num1, int num2, String sign) {
