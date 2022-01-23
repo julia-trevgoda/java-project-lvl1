@@ -3,17 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Random;
-
 public class Calc {
 
     private static final String GAME_DESCRIPTION = "What is the result of the expression?";
     private static final String[] SIGNS_ARRAY = {"+", "*", "-"};
-
-    public static String getRandomSign() {
-        int randomIndex = new Random().nextInt(SIGNS_ARRAY.length);
-        return SIGNS_ARRAY[randomIndex];
-    }
 
     static int calculateAnswer(int num1, int num2, String sign) {
         switch (sign) {
@@ -36,7 +29,8 @@ public class Calc {
 
             int firstRandomNumber = Utils.getRandomNumber(Utils.MIN_RANDOM_NUM, Utils.MAX_RANDOM_NUM);
             int secondRandomNumber = Utils.getRandomNumber(Utils.MIN_RANDOM_NUM, Utils.MAX_RANDOM_NUM);
-            String sign = getRandomSign();
+            int randomIndex = Utils.getRandomIndex(SIGNS_ARRAY.length);
+            String sign = SIGNS_ARRAY[randomIndex];
 
             int rightAnswer = calculateAnswer(firstRandomNumber, secondRandomNumber, sign);
             String expression = firstRandomNumber + " " + sign + " " + secondRandomNumber;

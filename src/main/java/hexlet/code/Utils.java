@@ -12,4 +12,11 @@ public class Utils {
         int randomNumber = rand.nextInt(max);
         return randomNumber + min;
     }
+
+    public static int getRandomIndex(int max) {
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(max);
+        return randomNumber;
+    }
+
 }
