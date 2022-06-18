@@ -6,16 +6,16 @@
 [![makefile-ci](https://github.com/julia-trevgoda/java-project-lvl1/actions/workflows/makefile-ci.yml/badge.svg)](https://github.com/julia-trevgoda/java-project-lvl1/actions/workflows/makefile-ci.yml)
 
 Asciinema for Game menu + Even game:
-[![asciicast](https://asciinema.org/a/BHOIqk2ZfDcmiWRXaxi51lxIr.svg)](https://asciinema.org/a/BHOIqk2ZfDcmiWRXaxi51lxIr)
+[![asciicast](https://asciinema.org/a/PBkI75WAURDLP2wSol9k0kuGg.svg)](https://asciinema.org/a/PBkI75WAURDLP2wSol9k0kuGg)
 
 Asccinema for Calc game:
-[![asciicast](https://asciinema.org/a/lxGWod8XUfurYEpTJ4FMQOl6T.svg)](https://asciinema.org/a/lxGWod8XUfurYEpTJ4FMQOl6T)
+[![asciicast](https://asciinema.org/a/L16wOCfjvkKkCXerR4mMmj5UA.svg)](https://asciinema.org/a/L16wOCfjvkKkCXerR4mMmj5UA)
 
-Asciinema for GCP game:
-[![asciicast](https://asciinema.org/a/wdTHjS9f7NzVYYOcJphqe7KU7.svg)](https://asciinema.org/a/wdTHjS9f7NzVYYOcJphqe7KU7)
+Asciinema for GCD game:
+[![asciicast](https://asciinema.org/a/ypkNkxIH4Gt7Zk8t6pnt9UIAX.svg)](https://asciinema.org/a/ypkNkxIH4Gt7Zk8t6pnt9UIAX)
 
 Asciinema for Progression game:
-[![asciicast](https://asciinema.org/a/KftGwMDJZ9q93giFDmrxFaU8m.svg)](https://asciinema.org/a/KftGwMDJZ9q93giFDmrxFaU8m)
+[![asciicast](https://asciinema.org/a/0R3v9oPlyHdVwg0g840jpOn13.svg)](https://asciinema.org/a/0R3v9oPlyHdVwg0g840jpOn13)
 
 Asciinema for Prime game:
-[![asciicast](https://asciinema.org/a/RUyrwZ2YiMECJjc1eoWgu3YoY.svg)](https://asciinema.org/a/RUyrwZ2YiMECJjc1eoWgu3YoY)
+[![asciicast](https://asciinema.org/a/iWXxDq0AGAwoVFosle89vnwi3.svg)](https://asciinema.org/a/iWXxDq0AGAwoVFosle89vnwi3)
